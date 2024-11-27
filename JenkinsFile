@@ -17,6 +17,7 @@ pipeline {
 stage('Clean Package') {
             steps {
                 echo " Cleaning Package"
+git branch : 'main', url: 'https://github.com/aniz-star/jenkins.git'
 sh "mvn  clean package"
             }
         }
