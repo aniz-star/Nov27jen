@@ -17,7 +17,7 @@ pipeline {
 stage('Clean Package') {
             steps {
                 echo " Cleaning Package"
-sh "mvn -Dmaven.test.failure.ignore=true clean package"
+sh "mvn  clean package"
             }
         }
 
