@@ -21,16 +21,6 @@ stage('Clean Package') {
             }
         }
 
-stage('Acceptance Testing') { 
-                        steps {
-                echo "Stage3- Acceptance Testing"
-                    }
-           }
-stage('Regression Testing') { 
-                        steps {
-                echo "Stage3 - Regression Testing"
-                    }
-           }
 stage (Testing){
             parallel {
                   stage('Performance Testing') {
@@ -44,6 +34,16 @@ stage (Testing){
             }
         }  
            } 
+stage('Acceptance Testing') { 
+                        steps {
+                echo "Stage3- Acceptance Testing"
+                    }
+           }
+stage('Regression Testing') { 
+                        steps {
+                echo "Stage3 - Regression Testing"
+                    }
+           }
             }
         }
               }
