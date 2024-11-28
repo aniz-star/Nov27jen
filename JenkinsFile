@@ -21,7 +21,7 @@ stage('Clean Package') {
             }
         }
 
-            stage (Testing ) { 
+            stage ('Testing' ) { 
 parallel {
                   stage('Performance Testing') {
             steps { 
