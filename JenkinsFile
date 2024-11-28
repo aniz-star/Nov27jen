@@ -20,10 +20,19 @@ stage('Clean Package') {
                 sh "mvn  clean package"
             }
         }
+stage('Acceptance Testing') { 
+                        steps {
+                echo "Stage3- Acceptance Testing"
+                    }
+           }
+stage('Regression Testing') { 
+                        steps {
+                echo "Stage3 - Regression Testing"
+                    }
+           }
 
-            stage ('Nested Testing' ) { 
-                parallel {
-stages {                  
+            stage ('Testing' ) { 
+                parallel {              
 stage('Performance Testing') {
             steps { 
                 echo "Stage3 - Performance Testing"
@@ -35,22 +44,6 @@ stage('Performance Testing') {
             }
         }  
 }
-stage ('Sequntial Testing') {
-stages {
-stage('Acceptance Testing') { 
-                        steps {
-                echo "Stage3- Acceptance Testing"
-                    }
-           }
-stage('Regression Testing') { 
-                        steps {
-                echo "Stage3 - Regression Testing"
-                    }
-           }
-                }
 }
 }
 }
-}
-}
-
