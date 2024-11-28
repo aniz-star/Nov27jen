@@ -22,7 +22,7 @@ stage('Clean Package') {
         }
 
             stage (Testing ) { 
-steps { parallel {
+parallel {
                   stage('Performance Testing') {
             steps { 
                 echo "Stage3 - Performance Testing"
@@ -45,6 +45,5 @@ stage('Regression Testing') {
                     }
            }
                 }
-} 
 }
 }
